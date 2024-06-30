@@ -9,16 +9,36 @@
 </head>
 
 <body id="root">
-    <div class="container">
+    <div id="_next" class="container">
         <div id="wrapper_calculator">
             <div class="calculator">
                 <div class="screen"></div>
                 <div id="grid" class="secondary-buttons">
-                    <div style="background-color: red">a</div>
-                    <div style="background-color: yellow">aa</div>
-                    <div style="background-color: green">aaa</div>
-                    <div style="background-color: blue">aaaa</div>
-                    <div style="background-color: violet">aaaaa</div>
+                    <div class="switcher">
+                        <p id="yellow-text">SHIFT</p>
+                        <button id="switch-btn"></button>
+                    </div>
+                    <div class="switcher">
+                        <p id="red-text">ALPHA</p>
+                        <button id="switch-btn"></button>
+                    </div>
+                    <div class="arrows" style="grid-column: span 2;">
+                        <img src="../images/arrow.svg" id="arrow" class="arrow-top" />
+                        <img src="../images/arrow.svg" id="arrow" class="arrow-left" />
+                        <img src="../images/arrow.svg" id="arrow" class="arrow-bottom" />
+                        <img src="../images/arrow.svg" id="arrow" class="arrow-right" />
+                    </div>
+                    <div class="switcher">
+                        <div>
+                            <p id="white-text" style="display: inline;">MENU</p>
+                            <p id="yellow-text" style="display: inline;">SETUP</p>
+                        </div>
+                        <button id="switch-btn"></button>
+                    </div>
+                    <div class="switcher">
+                        <p id="white-text">ON</p>
+                        <button id="switch-btn"></button>
+                    </div>
                 </div>
                 <div id="grid" class="primary-buttons">
                     <div style="background-color: red">a</div>

@@ -49,3 +49,68 @@
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: var(--primary-gap-size);
 }
+
+#yellow-text {
+  color: var(--yellow);
+  font-size: 14px;
+  font-weight: medium;
+}
+
+#red-text {
+  color: var(--red);
+  font-size: 14px;
+  font-weight: medium;
+}
+
+#white-text {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: medium;
+}
+
+.switcher {
+  text-align: center;
+
+  #switch-btn {
+    background: var(--gray);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.arrows {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+  cursor: pointer;
+}
+
+.arrow-top {
+  position: absolute;
+  top: 10px;
+}
+
+.arrow-left {
+  position: absolute;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.arrow-bottom {
+  position: absolute;
+  bottom: 10px;
+  transform: rotate(180deg);
+}
+
+.arrow-right {
+  position: absolute;
+  right: 0;
+  transform: rotate(270deg);
+}
