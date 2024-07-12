@@ -41,7 +41,7 @@
 }
 
 .secondary-buttons {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, minmax(0, 1fr));
   gap: var(--secondary-gap-size);
 } /* grid-column: span 2;  za strelice*/
@@ -131,7 +131,9 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    min-width: 34px;
+    width: 100%;
+    max-width: 60px;
+    min-width: 60px;
     min-height: 12px;
   }
 }
