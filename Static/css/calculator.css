@@ -150,4 +150,5 @@
 .primary-buttons .blue-btn {
   background-color: var(--blue) !important;
   color: var(--white) !important;
+  margin-bottom: 0px !important;
 }
