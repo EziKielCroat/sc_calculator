@@ -6,6 +6,10 @@ export default class Calculator {
 
         this.buttons.forEach(button => {
             console.log("button", button);
+
+            // if(button.getAttribute('shift-func')) {
+            //     console.log("Button has a shift function of", button.getAttribute('shift-func'));
+            // }
             this.#buttonCount++;
         });
 

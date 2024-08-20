@@ -16,11 +16,11 @@
                 <div id="grid" class="secondary-buttons">
                     <div class="switcher">
                         <p id="yellow-text">SHIFT</p>
-                        <button id="switch-btn"></button>
+                        <button id="switch-btn" shift-func="shift"></button>
                     </div>
                     <div class="switcher">
                         <p id="red-text">ALPHA</p>
-                        <button id="switch-btn"></button>
+                        <button id="switch-btn" alpha-func="alpha"></button>
                     </div>
                     <div class="arrows" style="grid-column: span 2;">
                         <img src="../images/arrow.svg" id="arrow" class="arrow-top" />
@@ -33,7 +33,7 @@
                             <p id="white-text" style="display: inline;">MENU</p>
                             <p id="yellow-text" style="display: inline;">SETUP</p>
                         </div>
-                        <button id="switch-btn"></button>
+                        <button id="switch-btn" shift-func="setup"></button>
                     </div>
                     <div class="switcher start-button">
                         <p id="white-text">ON</p>
@@ -41,138 +41,146 @@
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="margin-bottom: 3px;">QR</p>
-                        <button id="btn">OPTN</button>
+                        <button id="btn" shift-func="qr">OPTN</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">SOLVE</span>
                             <span id="red-text">=</span>
                         </p>
-                        <button id="btn">CALC</button>
+                        <button id="btn" shift-func="solve" alpha-text="equal">CALC</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">d/dx </span>
                             <span id="red-text">:</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">&Integral;</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="ddx"
+                            alpha-func="colon">&Integral;</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">Σ</p>
-                        <button id="btn" style="width: 34px; height: auto;">x</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="sigma">x</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">C a/b</p>
-                        <button id="btn" style="width: 34px; height: auto;">C/a</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="cab">C/a</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">∛</p>
-                        <button id="btn" style="width: 34px; height: auto;">√</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="sq3">√</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">x⌃3</p>
-                        <button id="btn" style="width: 34px; height: auto;">x⌃2</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="po3">x⌃2</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">X⌃√y</p>
-                        <button id="btn">x⌃y</button>
+                        <button id="btn" shift-func="sq">x⌃y</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">10⌃x</p>
-                        <button id="btn">logx y</button>
+                        <button id="btn" shift-func="tenpox">logx y</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">e⌃x</p>
-                        <button id="btn" style="width: 34px; height: auto;">In</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="epox">In</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">log </span>
                             <span id="red-text">{A}</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">(-)</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="log" alpha-func="a">(-)</button>
                     </div>
                     <div class="button" shift-func="FACT" alpha-func="{B}">
                         <p>
                             <span id="yellow-text">FACT </span>
                             <span id="red-text">{B}</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">° ‘ ‘’</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="fact" alpha-func="b">° ‘
+                            ‘’</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">x! </span>
                             <span id="red-text">{C}</span>
                         </p>
-                        <button id="btn">OPTN</button>
+                        <button id="btn" shift-func="fac" alpha-func="c">OPTN</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">sin⌃-1 </span>
                             <span id="red-text">{D}</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">cos</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="sin-1"
+                            alpha-func="d">cos</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">cos⌃-1 </span>
                             <span id="red-text">{E}</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">cos</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="cos-1"
+                            alpha-func="e">cos</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">tan⌃-1 </span>
                             <span id="red-text">{F}</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">tan</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="tan-1"
+                            alpha-func="f">tan</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">RECALL</p>
-                        <button id="btn" style="width: 34px; height: auto;">STO</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="recall">STO</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">Abs</p>
-                        <button id="btn" style="width: 34px; height: auto;">(</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="abs">(</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">, </span>
                             <span id="red-text">x</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">)</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="comma" alpha-func="x">)</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">a b/c <=> d/c </span>
                             <span id="red-text">y</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">STO</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="mixfra"
+                            alpha-func="y">STO</button>
                     </div>
                 </div>
                 <div id="grid" class="primary-buttons">
                     <div class="button">
                         <p id="yellow-text">CONST</p>
-                        <button id="btn" style="width: 34px; height: auto;">7</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="const">7</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">CONV</p>
-                        <button id="btn" style="width: 34px; height: auto;">8</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="conv">8</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">RESET</p>
-                        <button id="btn" style="width: 34px; height: auto;">9</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="reset">9</button>
                     </div>
                     <div class="button">
                         <p>
                             <span id="yellow-text">INS </span>
                             <span id="red-text">UNDO</span>
                         </p>
-                        <button id="btn" class="blue-btn" style="width: 34px; height: auto;">DEL</button>
+                        <button id="btn" class="blue-btn" style="width: 34px; height: auto;" shift-func="ins"
+                            alpha-func="undo">DEL</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text">OFF</p>
-                        <button id="btn" class="blue-btn" style="width: 34px; height: auto;">AC</button>
+                        <button id="btn" class="blue-btn" style="width: 34px; height: auto;"
+                            shift-func="off">AC</button>
                     </div>
                     <div class="button">
                         <button id="btn" style="width: 34px; height: auto;">4</button>
@@ -185,11 +193,11 @@
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">nPr</p>
-                        <button id="btn" style="width: 34px; height: auto;">X</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="npr">X</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">nCr</p>
-                        <button id="btn" style="width: 34px; height: auto;">/</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="ncr">/</button>
                     </div>
                     <div class="button">
                         <button id="btn" style="width: 34px; height: auto;">1</button>
@@ -202,37 +210,39 @@
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">Pol</p>
-                        <button id="btn" style="width: 34px; height: auto;">+</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="pol">+</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">Rec</p>
-                        <button id="btn" style="width: 34px; height: auto;">-</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="rec">-</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">Rnd</p>
-                        <button id="btn" style="width: 34px; height: auto;">0</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="rnd">0</button>
                     </div>
                     <div class="button">
                         <p style="position: absolute; margin-bottom:40px;">
                             <span id="yellow-text">Ran# </span>
                             <span id="red-text">RanInt</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">.</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="ranhash"
+                            alpha-func="ranint">.</button>
                     </div>
                     <div class="button">
                         <p style="position: absolute; margin-bottom:40px;">
                             <span id="yellow-text" style="padding-right: 10px;">π </span>
                             <span id="red-text">e</span>
                         </p>
-                        <button id="btn" style="width: 34px; height: auto;">x10⌃x</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="pi"
+                            alpha-func="e">x10⌃x</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">%</p>
-                        <button id="btn" style="width: 34px; height: auto;">Ans</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="percentage">Ans</button>
                     </div>
                     <div class="button">
                         <p id="yellow-text" style="position: absolute; margin-bottom:40px;">≈</p>
-                        <button id="btn" style="width: 34px; height: auto;">=</button>
+                        <button id="btn" style="width: 34px; height: auto;" shift-func="aproxequal">=</button>
                     </div>
                 </div>
             </div>
